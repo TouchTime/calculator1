@@ -25,6 +25,7 @@ module.exports = {
     'no-debugger': process.env.NODE_ENV === 'production' ? 2 : 0,
     "semi":0,//语句禁止分号结尾
     'indent':0,
-    'no-unused-vars':0
+    'no-unused-vars':0,
+    "no-multiple-empty-lines":0,//空行最多不能超过2行
   }
 }
