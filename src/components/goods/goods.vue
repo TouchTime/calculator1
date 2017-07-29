@@ -17,16 +17,18 @@
   export default {
       data () {
           return {
-            newclick: function () {
-                var loginType
-                if (loginType === 'username') {
-                  loginType = ''
-                } else {
-                  loginType = 'username'
-                }
-            }
           }
+      },
+    methods: {
+      newclick: function () {
+        var loginType
+        if (loginType === 'username') {
+          loginType = ''
+        } else {
+          loginType = 'username'
+        }
       }
+    }
   }
 </script>
 
