@@ -18,6 +18,26 @@
 
     <input type="checkbox" id="checkbox" v-model="check_ed">
     <label for="checkbox">{{ check_ed }}</label>
+
+    <ul>
+      <li v-for="(item, index) in items">
+        {{ item.message }}-{{ index }}
+      </li>
+    </ul>
+    <ul>
+      <li v-for="item of items">
+        {{ item.message }}
+      </li>
+    </ul>
+    <div>
+      <input type="radio" id="choose" name="box1" value="one" v-model="select" checked>
+      <label for="choose">one</label>
+      <input type="radio" id="choose1" name="box1" value="second" v-model="select">
+      <label for="choose1">two</label>
+      <span>这是{{ select }}</span>
+    </div>
+
+
   </div>
 
 </template>
@@ -30,7 +50,13 @@
               counter: 0,
               counte: 1,
               me: 'hi',
-              check_ed: false
+              check_ed: false,
+              items: [
+                {message: '组件'},
+                {message: '模块'},
+                {message: '路由'}
+              ],
+            select: ''
           }
       },
     methods: {
